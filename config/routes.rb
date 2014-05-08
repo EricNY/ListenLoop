@@ -1,6 +1,10 @@
 ListenLoop::Application.routes.draw do
 
 
+  resources :slides
+
+  resources :presentations
+
   resources :feedbacks
 
   resources :customers

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140508182239) do
+ActiveRecord::Schema.define(version: 20140508202031) do
 
   create_table "customers", force: true do |t|
     t.string   "name"
@@ -24,6 +24,21 @@ ActiveRecord::Schema.define(version: 20140508182239) do
   create_table "feedbacks", force: true do |t|
     t.integer  "customer_id"
     t.string   "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "presentations", force: true do |t|
+    t.string   "link"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "slides", force: true do |t|
+    t.integer  "presentation_id"
+    t.string   "title"
+    t.string   "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
