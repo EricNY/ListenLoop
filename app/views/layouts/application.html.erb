@@ -2,13 +2,25 @@
 <html>
 <head>
   <title>ListenLoop</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript" src="/jquery-1.11.1.min.js"></script>
 </head>
 <body>
 
-<%= yield %>
+<div class='container'>
+  <%= yield %>
+</div>
 
+<script type="text/javascript">
+$( document ).ready(function() {
+  $( "#generate" ).on( "click", function() {
+    alert('Generating Presentation...');
+  });
+
+    $( "#email" ).on( "click", function() {
+    alert('Emailing to Client...');
+  });
+});
+</script>
 </body>
 </html>
