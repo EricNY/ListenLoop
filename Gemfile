@@ -23,15 +23,13 @@ gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
-
+gem 'nested_scaffold'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
 group :development, :test do
   gem 'sqlite3'
 end
-
-gem 'pg'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

@@ -2,8 +2,8 @@
 
 one:
   customer_id: 1
-  feedback: MyString
+  content: MyString
 
 two:
   customer_id: 1
-  feedback: MyString
+  content: MyString

@@ -22,9 +22,8 @@
         <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
         <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
-
-<td><%= link_to 'Add Feedback', new_customer_feedback_path(customer.id) %></td>
-
+<td><%= link_to 'New Feedback', new_customer_feedback_path(customer) %></td>
+<td><%= link_to 'See Feedback', customer_feedbacks_path(customer) %></td>
 
       </tr>
     <% end %>
