@@ -6,8 +6,6 @@
       <th>Link</th>
       <th>Title</th>
       <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
 
@@ -16,9 +14,12 @@
       <tr>
         <td><%= presentation.link %></td>
         <td><%= presentation.title %></td>
-        <td><%= link_to 'Show', presentation %></td>
-        <td><%= link_to 'Edit', edit_presentation_path(presentation) %></td>
-        <td><%= link_to 'Destroy', presentation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to 'Manage Slides', presentation_slides_path(presentation) %>
+          <%= link_to 'Generate Presentation', presentation, :target => "_blank" %>
+          <%= link_to 'Edit', edit_presentation_path(presentation) %>
+          <%= link_to 'Destroy', presentation, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>

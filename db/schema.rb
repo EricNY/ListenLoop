@@ -11,22 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140508202031) do
-
-  create_table "customers", force: true do |t|
-    t.string   "name"
-    t.string   "company"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "feedbacks", force: true do |t|
-    t.integer  "customer_id"
-    t.string   "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20140511031618) do
 
   create_table "presentations", force: true do |t|
     t.string   "link"
@@ -37,10 +22,11 @@ ActiveRecord::Schema.define(version: 20140508202031) do
 
   create_table "slides", force: true do |t|
     t.integer  "presentation_id"
-    t.string   "title"
-    t.string   "body"
+    t.string   "feedback"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "slides", ["presentation_id"], name: "index_slides_on_presentation_id"
 
 end

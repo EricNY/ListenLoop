@@ -1,20 +1,9 @@
 ListenLoop::Application.routes.draw do
 
-
-  resources :slides
-
-  resources :presentations
-
-  resources :feedbacks
-
-  resources :customers
-
-  resources :customers do
-    resources :feedbacks
+  resources :presentations do
+    resources :slides
   end
 
-  get "welcome/index"
-
-  root 'welcome#index'
+  root 'presentations#index'
 
 end

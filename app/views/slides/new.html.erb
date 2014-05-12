@@ -1,5 +1,5 @@
-<h1>New slide</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', slides_path %>
+<%= form_for [@presentation, @slide] do |f| %>
+  <%= f.label :feedback%>
+  <%= f.text_field :feedback %>
+  <%= f.submit "Save" %>
+<% end %>
